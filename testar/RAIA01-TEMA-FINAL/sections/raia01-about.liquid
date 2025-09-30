@@ -1,0 +1,113 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width section-{{ section.id }}-padding">
+  <div class="about-section" style="max-width: 1200px; margin: 0 auto;">
+
+    <!-- Título -->
+    <h1 style="text-align: center; color: #7B3F9D; font-size: 3rem; margin-bottom: 20px; font-weight: 700;">
+      Sobre Nós
+    </h1>
+
+    <!-- Imagem Principal -->
+    {%- if section.settings.image != blank -%}
+      <div style="margin: 40px 0; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+        <img
+          src="{{ section.settings.image | image_url: width: 1200 }}"
+          alt="Raia 01 Fit Store"
+          style="width: 100%; height: auto; display: block;"
+          loading="lazy"
+        >
+      </div>
+    {%- endif -%}
+
+    <!-- Conteúdo -->
+    <div style="background: #F8F9FA; padding: 60px 40px; border-radius: 20px; margin: 40px 0;">
+      <div style="max-width: 900px; margin: 0 auto; color: #333; line-height: 1.8; font-size: 1.1rem;">
+
+        <p style="margin-bottom: 25px; text-align: justify;">
+          A <strong style="color: #7B3F9D;">Raia 01 Fit Store</strong> nasceu em <strong>Campo Verde-MT</strong> com o propósito de unir estilo, conforto e performance em moda fitness. Mais do que uma loja, somos uma marca que acredita no poder da disciplina, da saúde e da autoestima para transformar vidas.
+        </p>
+
+        <p style="margin-bottom: 25px; text-align: justify;">
+          Nosso maior diferencial está na <strong style="color: #E91E63;">proximidade com nossos clientes</strong>: oferecemos atendimento humanizado, entrega rápida e peças selecionadas que acompanham tanto o treino quanto o dia a dia. Somos referência local em qualidade, confiança e autenticidade, sempre trazendo novidades do universo fitness para nossa comunidade.
+        </p>
+
+        <p style="margin-bottom: 25px; text-align: justify;">
+          Campo Verde é o ponto de partida da nossa história, e é aqui que construímos nossa identidade. Mas nosso olhar vai além: queremos que a Raia 01 esteja presente em outras cidades, levando a mesma essência de credibilidade, estilo e bem-estar que conquistou nossos clientes locais.
+        </p>
+
+        <p style="margin-bottom: 0; text-align: justify;">
+          Seja na academia, no trabalho ou no lazer, queremos estar com você em todos os momentos, <strong style="color: #7B3F9D;">inspirando confiança e movimento</strong>.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div style="text-align: center; margin-top: 60px;">
+      <h3 style="color: #7B3F9D; font-size: 2rem; margin-bottom: 20px; font-weight: 600;">
+        Vista seu Esporte!
+      </h3>
+      <a href="/collections/all" style="display: inline-block; background: linear-gradient(135deg, #7B3F9D, #E91E63); color: white; padding: 18px 50px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(123, 63, 157, 0.3);">
+        Conheça Nossos Produtos
+      </a>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Raia 01 - Sobre Nós",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagem Principal"
+    },
+    {
+      "type": "header",
+      "content": "Espaçamento"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaçamento Superior",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaçamento Inferior",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Raia 01 - Sobre Nós"
+    }
+  ]
+}
+{% endschema %}
