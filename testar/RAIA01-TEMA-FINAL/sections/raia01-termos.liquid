@@ -1,0 +1,110 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width section-{{ section.id }}-padding">
+  <div style="max-width: 900px; margin: 0 auto;">
+
+    <h1 style="text-align: center; color: #7B3F9D; font-size: 2.5rem; margin-bottom: 40px; font-weight: 700;">
+      Termos de Uso
+    </h1>
+
+    <div style="background: #F8F9FA; padding: 40px; border-radius: 15px; color: #333; line-height: 1.8;">
+
+      <p style="margin-bottom: 25px;">
+        Bem-vindo à <strong>Raia 01 Fit Store</strong>. Ao acessar e usar nosso site, você concorda com os termos e condições descritos abaixo.
+      </p>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">🛍️ Uso do Site</h2>
+      <p style="margin-bottom: 25px;">
+        Este site destina-se à venda de produtos de moda fitness. Você deve ter pelo menos 18 anos para realizar compras. Ao navegar em nosso site, você concorda em utilizá-lo apenas para fins legítimos e de acordo com as leis aplicáveis.
+      </p>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">💳 Compras e Pagamentos</h2>
+      <ul style="padding-left: 20px; margin-bottom: 25px;">
+        <li>Os preços estão sujeitos a alterações sem aviso prévio</li>
+        <li>Reservamos o direito de cancelar pedidos em caso de erro de preço</li>
+        <li>O pagamento deve ser realizado no momento da compra</li>
+        <li>Emitimos nota fiscal para todas as compras</li>
+      </ul>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">📦 Entrega</h2>
+      <p style="margin-bottom: 25px;">
+        Os prazos de entrega são estimados e podem variar conforme a localização e disponibilidade dos produtos. Não nos responsabilizamos por atrasos causados por transportadoras ou situações fora do nosso controle.
+      </p>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">🔄 Trocas e Devoluções</h2>
+      <p style="margin-bottom: 25px;">
+        Siga nossa <a href="/pages/trocas-devolucoes" style="color: #7B3F9D; text-decoration: underline;">Política de Trocas e Devoluções</a> para mais informações sobre como proceder.
+      </p>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">©️ Propriedade Intelectual</h2>
+      <p style="margin-bottom: 25px;">
+        Todo o conteúdo deste site, incluindo textos, imagens, logos e marcas, é propriedade da Raia 01 Fit Store e está protegido por leis de direitos autorais. É proibida a reprodução sem autorização.
+      </p>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">⚖️ Limitação de Responsabilidade</h2>
+      <p style="margin-bottom: 25px;">
+        Não nos responsabilizamos por danos indiretos, incidentais ou consequenciais decorrentes do uso deste site ou da compra de produtos, exceto quando exigido por lei.
+      </p>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">📞 Contato</h2>
+      <p style="margin-bottom: 0;">
+        Para dúvidas sobre estes termos, entre em contato:<br>
+        <strong>Email:</strong> <a href="mailto:raia1fit@gmail.com" style="color: #7B3F9D; text-decoration: none;">raia1fit@gmail.com</a><br>
+        <strong>WhatsApp:</strong> <a href="https://wa.me/5566996977634" style="color: #25D366; text-decoration: none;">(66) 99697-7634</a>
+      </p>
+
+    </div>
+
+    <p style="text-align: center; margin-top: 30px; color: #666; font-size: 0.9rem;">
+      Última atualização: {{ 'now' | date: "%d/%m/%Y" }}
+    </p>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Raia 01 - Termos de Uso",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaçamento Superior",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaçamento Inferior",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Raia 01 - Termos de Uso"
+    }
+  ]
+}
+{% endschema %}

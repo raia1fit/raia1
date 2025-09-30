@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "raia01_trocas": {
+      "type": "raia01-trocas",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "raia01_trocas"
+  ]
+}

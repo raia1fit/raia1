@@ -1,0 +1,99 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width section-{{ section.id }}-padding">
+  <div style="max-width: 900px; margin: 0 auto;">
+
+    <h1 style="text-align: center; color: #7B3F9D; font-size: 2.5rem; margin-bottom: 40px; font-weight: 700;">
+      Trocas e Devoluções
+    </h1>
+
+    <div style="background: #F8F9FA; padding: 40px; border-radius: 15px; margin-bottom: 30px;">
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 20px;">📦 Prazo para Trocas</h2>
+      <p style="color: #333; line-height: 1.8; margin-bottom: 25px;">
+        Você tem até <strong>7 dias corridos</strong> após o recebimento do produto para solicitar a troca ou devolução, conforme o Código de Defesa do Consumidor.
+      </p>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 20px;">✅ Condições para Troca</h2>
+      <ul style="color: #333; line-height: 1.8; margin-bottom: 25px; padding-left: 20px;">
+        <li>Produto sem uso, com etiquetas originais</li>
+        <li>Embalagem original em perfeito estado</li>
+        <li>Nota fiscal do pedido</li>
+      </ul>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 20px;">🔄 Como Solicitar</h2>
+      <p style="color: #333; line-height: 1.8; margin-bottom: 15px;">
+        Entre em contato conosco através de:
+      </p>
+      <ul style="color: #333; line-height: 1.8; margin-bottom: 25px; padding-left: 20px;">
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/5566996977634" style="color: #25D366; text-decoration: none;">(66) 99697-7634</a></li>
+        <li><strong>Email:</strong> <a href="mailto:raia1fit@gmail.com" style="color: #7B3F9D; text-decoration: none;">raia1fit@gmail.com</a></li>
+      </ul>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 20px;">💰 Reembolso</h2>
+      <p style="color: #333; line-height: 1.8; margin-bottom: 15px;">
+        O reembolso será processado em até <strong>10 dias úteis</strong> após a aprovação da devolução, no mesmo método de pagamento utilizado na compra.
+      </p>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 20px;">📍 Troca em Loja Física</h2>
+      <p style="color: #333; line-height: 1.8; margin-bottom: 0;">
+        Se você está em Campo Verde-MT, pode realizar a troca diretamente em nossa loja física. Entre em contato para verificar o endereço e horário de funcionamento.
+      </p>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="/pages/contato" style="display: inline-block; background: linear-gradient(135deg, #7B3F9D, #E91E63); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+        Fale Conosco
+      </a>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Raia 01 - Trocas",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaçamento Superior",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaçamento Inferior",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Raia 01 - Trocas"
+    }
+  ]
+}
+{% endschema %}
