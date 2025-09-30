@@ -447,7 +447,7 @@
           "settings": {
             "text": {
               "label": "Texto",
-              "default": "Boas-vindas à nossa loja"
+              "default": "Vista seu Esporte!"
             },
             "text_alignment": {
               "label": "Alinhamento do texto",
