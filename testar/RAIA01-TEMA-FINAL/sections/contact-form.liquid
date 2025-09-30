@@ -23,6 +23,39 @@
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
+
+    <!-- Informações de Contato -->
+    <div style="background: #F8F9FA; border-radius: 12px; padding: 30px; margin-bottom: 40px; display: grid; gap: 20px;">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <div style="width: 50px; height: 50px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px;">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div>
+          <h3 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: 600;">WhatsApp</h3>
+          <a href="https://wa.me/5566996977634" target="_blank" style="color: #25D366; text-decoration: none; font-size: 1rem;">+55 66 99697-7634</a>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <div style="width: 50px; height: 50px; border-radius: 50%; background: #7B3F9D; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px;">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div>
+          <h3 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: 600;">Email</h3>
+          <a href="mailto:raia1fit@gmail.com" style="color: #7B3F9D; text-decoration: none; font-size: 1rem;">raia1fit@gmail.com</a>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <div style="width: 50px; height: 50px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px;">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div>
+          <h3 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: 600;">Grupo do WhatsApp</h3>
+          <a href="https://chat.whatsapp.com/KaaLi4BDe9jD5sbk3Oj8GT" target="_blank" style="color: #25D366; text-decoration: none; font-size: 1rem;">Entrar no Grupo</a>
+        </div>
+      </div>
+    </div>
     {%- liquid
       assign contact_form_class = 'isolate'
       if settings.animations_reveal_on_scroll
