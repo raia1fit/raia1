@@ -1,0 +1,171 @@
+<!-- ============================================
+     RAIA 01 - SEÇÃO DE CATEGORIAS
+     Cole no editor de seções da Nuvemshop
+     ============================================ -->
+
+<section class="categories-section" style="padding: 80px 0;">
+  <div class="container">
+
+    <!-- Título da Seção -->
+    <div class="section-title">
+      <h2>Explore Nossas Categorias</h2>
+      <p style="color: #666; font-size: 1.1rem; margin-top: 10px;">Encontre o look perfeito para seu treino</p>
+    </div>
+
+    <!-- Grid de Categorias -->
+    <div class="categories-grid">
+
+      <!-- Categoria 1: Crossfit -->
+      <a href="/categoria/crossfit" class="category-card">
+        <img src="IMAGEM_CROSSFIT.jpg" alt="Crossfit" class="category-card-image">
+        <div class="category-card-overlay">
+          <h3 class="category-card-title">Crossfit</h3>
+        </div>
+      </a>
+
+      <!-- Categoria 2: Academia -->
+      <a href="/categoria/academia" class="category-card">
+        <img src="IMAGEM_ACADEMIA.jpg" alt="Academia" class="category-card-image">
+        <div class="category-card-overlay">
+          <h3 class="category-card-title">Academia</h3>
+        </div>
+      </a>
+
+      <!-- Categoria 3: Beach Tennis -->
+      <a href="/categoria/beach-tennis" class="category-card">
+        <img src="IMAGEM_BEACH_TENNIS.jpg" alt="Beach Tennis" class="category-card-image">
+        <div class="category-card-overlay">
+          <h3 class="category-card-title">Beach Tennis</h3>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================
+     SEÇÃO ALTERNATIVA: CATEGORIAS COM DESCRIÇÃO
+     ============================================ -->
+
+<section class="categories-detailed" style="padding: 80px 0; background: #F8F9FA;">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Compre por Modalidade</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+
+      <!-- Crossfit -->
+      <div class="category-detail-card" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+        <div style="height: 250px; overflow: hidden;">
+          <img src="IMAGEM_CROSSFIT.jpg" alt="Crossfit" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+        </div>
+        <div style="padding: 30px;">
+          <h3 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px;">Crossfit</h3>
+          <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+            Peças de alta resistência com tecido respirável, perfeitas para WODs intensos. Conforto e liberdade de movimento.
+          </p>
+          <a href="/categoria/crossfit" class="btn-primary" style="display: inline-block;">Ver Produtos</a>
+        </div>
+      </div>
+
+      <!-- Academia -->
+      <div class="category-detail-card" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+        <div style="height: 250px; overflow: hidden;">
+          <img src="IMAGEM_ACADEMIA.jpg" alt="Academia" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+        </div>
+        <div style="padding: 30px;">
+          <h3 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px;">Academia</h3>
+          <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+            Looks estilosos que combinam performance e estilo. Ideal para musculação, aeróbicos e treinos funcionais.
+          </p>
+          <a href="/categoria/academia" class="btn-primary" style="display: inline-block;">Ver Produtos</a>
+        </div>
+      </div>
+
+      <!-- Beach Tennis -->
+      <div class="category-detail-card" style="background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+        <div style="height: 250px; overflow: hidden;">
+          <img src="IMAGEM_BEACH_TENNIS.jpg" alt="Beach Tennis" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+        </div>
+        <div style="padding: 30px;">
+          <h3 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px;">Beach Tennis</h3>
+          <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+            Tecidos leves e com proteção UV. Conforto térmico para jogar sob o sol com muito estilo e performance.
+          </p>
+          <a href="/categoria/beach-tennis" class="btn-primary" style="display: inline-block;">Ver Produtos</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .category-detail-card:hover {
+    transform: translateY(-10px);
+  }
+
+  .category-detail-card:hover img {
+    transform: scale(1.1);
+  }
+</style>
+
+<!-- ============================================
+     SEÇÃO: SUBCATEGORIAS (TIPOS DE PRODUTO)
+     ============================================ -->
+
+<section class="product-types" style="padding: 60px 0;">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Compre por Tipo</h2>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+      <a href="/produtos/leggings" class="type-badge" style="background: linear-gradient(135deg, #7B3F9D, #E91E63); color: white; padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(123,63,157,0.2);">
+        Leggings
+      </a>
+
+      <a href="/produtos/tops" class="type-badge" style="background: linear-gradient(135deg, #7B3F9D, #E91E63); color: white; padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(123,63,157,0.2);">
+        Tops
+      </a>
+
+      <a href="/produtos/shorts" class="type-badge" style="background: linear-gradient(135deg, #7B3F9D, #E91E63); color: white; padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(123,63,157,0.2);">
+        Shorts
+      </a>
+
+      <a href="/produtos/conjuntos" class="type-badge" style="background: linear-gradient(135deg, #7B3F9D, #E91E63); color: white; padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(123,63,157,0.2);">
+        Conjuntos
+      </a>
+
+      <a href="/produtos/macaquinhos" class="type-badge" style="background: linear-gradient(135deg, #7B3F9D, #E91E63); color: white; padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(123,63,157,0.2);">
+        Macacões
+      </a>
+
+      <a href="/produtos/acessorios" class="type-badge" style="background: linear-gradient(135deg, #7B3F9D, #E91E63); color: white; padding: 15px 35px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(123,63,157,0.2);">
+        Acessórios
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .type-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(123,63,157,0.3) !important;
+  }
+
+  @media (max-width: 768px) {
+    .type-badge {
+      width: calc(50% - 10px);
+      text-align: center;
+    }
+  }
+</style>

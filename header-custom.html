@@ -1,0 +1,212 @@
+<!-- ============================================
+     RAIA 01 - HEADER CUSTOMIZADO
+     Cole no editor de tema da Nuvemshop (header.html)
+     ============================================ -->
+
+<!-- Barra de Anúncio Superior -->
+<div class="announcement-bar" style="background: linear-gradient(135deg, #7B3F9D, #E91E63); color: white; padding: 10px 0; text-align: center; font-size: 13px; font-weight: 600;">
+  <div class="container">
+    <i class="fas fa-shipping-fast"></i>
+    FRETE GRÁTIS acima de R$ 199 | PARCELAMENTO em até 3x sem juros
+  </div>
+</div>
+
+<!-- Header Principal -->
+<header class="header" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000;">
+  <div class="container">
+    <div class="header-content" style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0;">
+
+      <!-- Menu Mobile (Hamburger) -->
+      <button class="mobile-menu-toggle" style="display: none; background: none; border: none; font-size: 24px; color: #7B3F9D; cursor: pointer;">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Logo -->
+      <div class="header-logo" style="flex: 0 0 auto;">
+        <a href="/">
+          <img src="URL_DA_LOGO_2.png" alt="Raia 01 Fitness Store" style="max-height: 70px; width: auto; transition: transform 0.3s ease;">
+        </a>
+      </div>
+
+      <!-- Navegação Desktop -->
+      <nav class="header-nav" style="flex: 1; margin: 0 40px;">
+        <ul class="nav-list" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 30px; justify-content: center; align-items: center;">
+
+          <li>
+            <a href="/produtos" style="color: #333; font-weight: 500; text-transform: uppercase; font-size: 14px; letter-spacing: 0.5px; transition: color 0.3s ease; text-decoration: none;">
+              Todos os Produtos
+            </a>
+          </li>
+
+          <li class="nav-item-dropdown" style="position: relative;">
+            <a href="#" class="dropdown-toggle" style="color: #333; font-weight: 500; text-transform: uppercase; font-size: 14px; letter-spacing: 0.5px; transition: color 0.3s ease; text-decoration: none;">
+              Modalidades <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i>
+            </a>
+            <ul class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-radius: 10px; padding: 15px 0; min-width: 200px; list-style: none; margin: 10px 0 0 0; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease;">
+              <li><a href="/categoria/crossfit" style="display: block; padding: 10px 25px; color: #333; text-decoration: none; transition: background 0.3s ease;">Crossfit</a></li>
+              <li><a href="/categoria/academia" style="display: block; padding: 10px 25px; color: #333; text-decoration: none; transition: background 0.3s ease;">Academia</a></li>
+              <li><a href="/categoria/beach-tennis" style="display: block; padding: 10px 25px; color: #333; text-decoration: none; transition: background 0.3s ease;">Beach Tennis</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item-dropdown" style="position: relative;">
+            <a href="#" class="dropdown-toggle" style="color: #333; font-weight: 500; text-transform: uppercase; font-size: 14px; letter-spacing: 0.5px; transition: color 0.3s ease; text-decoration: none;">
+              Produtos <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i>
+            </a>
+            <ul class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-radius: 10px; padding: 15px 0; min-width: 200px; list-style: none; margin: 10px 0 0 0; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease;">
+              <li><a href="/produtos/leggings" style="display: block; padding: 10px 25px; color: #333; text-decoration: none;">Leggings</a></li>
+              <li><a href="/produtos/tops" style="display: block; padding: 10px 25px; color: #333; text-decoration: none;">Tops</a></li>
+              <li><a href="/produtos/shorts" style="display: block; padding: 10px 25px; color: #333; text-decoration: none;">Shorts</a></li>
+              <li><a href="/produtos/conjuntos" style="display: block; padding: 10px 25px; color: #333; text-decoration: none;">Conjuntos</a></li>
+              <li><a href="/produtos/macacoes" style="display: block; padding: 10px 25px; color: #333; text-decoration: none;">Macacões</a></li>
+              <li><a href="/produtos/acessorios" style="display: block; padding: 10px 25px; color: #333; text-decoration: none;">Acessórios</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="/lancamentos" style="color: #E91E63; font-weight: 600; text-transform: uppercase; font-size: 14px; letter-spacing: 0.5px; transition: color 0.3s ease; text-decoration: none;">
+              Lançamentos
+            </a>
+          </li>
+
+          <li>
+            <a href="/sobre-nos" style="color: #333; font-weight: 500; text-transform: uppercase; font-size: 14px; letter-spacing: 0.5px; transition: color 0.3s ease; text-decoration: none;">
+              Sobre Nós
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Ícones de Ação -->
+      <div class="header-actions" style="display: flex; gap: 20px; align-items: center;">
+
+        <!-- Busca -->
+        <a href="/busca" class="header-icon" style="color: #7B3F9D; font-size: 20px; transition: transform 0.3s ease; text-decoration: none;">
+          <i class="fas fa-search"></i>
+        </a>
+
+        <!-- Conta -->
+        <a href="/conta" class="header-icon" style="color: #7B3F9D; font-size: 20px; transition: transform 0.3s ease; text-decoration: none;">
+          <i class="fas fa-user"></i>
+        </a>
+
+        <!-- Carrinho -->
+        <a href="/carrinho" class="header-icon cart-icon" style="color: #7B3F9D; font-size: 20px; transition: transform 0.3s ease; position: relative; text-decoration: none;">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" style="position: absolute; top: -8px; right: -8px; background: #E91E63; color: white; border-radius: 50%; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700;">0</span>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- Menu Mobile (Sidebar) -->
+<div class="mobile-menu-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9998;"></div>
+
+<div class="mobile-menu" style="display: none; position: fixed; top: 0; left: -300px; width: 280px; height: 100%; background: white; z-index: 9999; transition: left 0.3s ease; overflow-y: auto; box-shadow: 5px 0 20px rgba(0,0,0,0.1);">
+
+  <div style="padding: 20px; border-bottom: 1px solid #E0E0E0; display: flex; justify-content: space-between; align-items: center;">
+    <img src="URL_DA_LOGO_1.png" alt="Raia 01" style="height: 50px;">
+    <button class="close-mobile-menu" style="background: none; border: none; font-size: 24px; color: #999; cursor: pointer;">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <nav style="padding: 20px 0;">
+    <ul style="list-style: none; margin: 0; padding: 0;">
+      <li style="border-bottom: 1px solid #F0F0F0;">
+        <a href="/produtos" style="display: block; padding: 15px 20px; color: #333; font-weight: 500; text-decoration: none;">Todos os Produtos</a>
+      </li>
+      <li style="border-bottom: 1px solid #F0F0F0;">
+        <a href="/categoria/crossfit" style="display: block; padding: 15px 20px; color: #333; text-decoration: none;">Crossfit</a>
+      </li>
+      <li style="border-bottom: 1px solid #F0F0F0;">
+        <a href="/categoria/academia" style="display: block; padding: 15px 20px; color: #333; text-decoration: none;">Academia</a>
+      </li>
+      <li style="border-bottom: 1px solid #F0F0F0;">
+        <a href="/categoria/beach-tennis" style="display: block; padding: 15px 20px; color: #333; text-decoration: none;">Beach Tennis</a>
+      </li>
+      <li style="border-bottom: 1px solid #F0F0F0;">
+        <a href="/lancamentos" style="display: block; padding: 15px 20px; color: #E91E63; font-weight: 600; text-decoration: none;">Lançamentos</a>
+      </li>
+      <li style="border-bottom: 1px solid #F0F0F0;">
+        <a href="/sobre-nos" style="display: block; padding: 15px 20px; color: #333; text-decoration: none;">Sobre Nós</a>
+      </li>
+    </ul>
+  </nav>
+
+</div>
+
+<style>
+  /* Dropdown Hover */
+  .nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-menu li a:hover {
+    background: #F8F9FA;
+    color: #7B3F9D;
+  }
+
+  /* Header Icons Hover */
+  .header-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .header-logo img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Menu Mobile - Responsivo */
+  @media (max-width: 992px) {
+    .mobile-menu-toggle {
+      display: block !important;
+    }
+
+    .header-nav {
+      display: none !important;
+    }
+
+    .header-content {
+      padding: 15px 0 !important;
+    }
+
+    .header-logo img {
+      max-height: 50px !important;
+    }
+  }
+
+  /* Mobile Menu Ativo */
+  .mobile-menu.active {
+    left: 0 !important;
+  }
+
+  .mobile-menu-overlay.active {
+    display: block !important;
+  }
+</style>
+
+<script>
+  // Toggle do Menu Mobile
+  document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+    document.querySelector('.mobile-menu').classList.add('active');
+    document.querySelector('.mobile-menu-overlay').classList.add('active');
+  });
+
+  // Fechar Menu Mobile
+  function closeMobileMenu() {
+    document.querySelector('.mobile-menu').classList.remove('active');
+    document.querySelector('.mobile-menu-overlay').classList.remove('active');
+  }
+
+  document.querySelector('.close-mobile-menu').addEventListener('click', closeMobileMenu);
+  document.querySelector('.mobile-menu-overlay').addEventListener('click', closeMobileMenu);
+
+  // Atualizar contador do carrinho (integrar com Nuvemshop)
+  // Exemplo: document.querySelector('.cart-count').textContent = quantidadeItens;
+</script>

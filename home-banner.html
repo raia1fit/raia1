@@ -1,0 +1,149 @@
+<!-- ============================================
+     RAIA 01 - BANNER HERO PRINCIPAL
+     Cole no editor de seções da Nuvemshop
+     ============================================ -->
+
+<section class="home-banner" style="background: url('SUA_IMAGEM_BANNER.jpg') center/cover no-repeat;">
+  <div class="home-banner-content container">
+    <h1 class="fade-in-up">Vista-se para Vencer</h1>
+    <p class="fade-in-up">Moda fitness de alta performance para mulheres que não param</p>
+    <div class="banner-buttons">
+      <a href="/produtos" class="btn-primary">Ver Coleção</a>
+      <a href="/lancamentos" class="btn-secondary">Novidades</a>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER ALTERNATIVO COM VÍDEO DE FUNDO -->
+<!--
+<section class="home-banner video-banner" style="position: relative; min-height: 600px;">
+  <video autoplay muted loop playsinline style="position: absolute; width: 100%; height: 100%; object-fit: cover; top: 0; left: 0;">
+    <source src="SEU_VIDEO.mp4" type="video/mp4">
+  </video>
+  <div class="home-banner-content container">
+    <h1 class="fade-in-up">Vista-se para Vencer</h1>
+    <p class="fade-in-up">Moda fitness de alta performance para mulheres que não param</p>
+    <div class="banner-buttons">
+      <a href="/produtos" class="btn-primary">Ver Coleção</a>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- SLIDER DE BANNERS (3 imagens) -->
+<div class="banner-slider" style="margin-bottom: 60px;">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 - Crossfit -->
+      <div class="swiper-slide">
+        <div class="home-banner" style="background: url('IMAGEM_CROSSFIT.jpg') center/cover no-repeat;">
+          <div class="home-banner-content container">
+            <h1>Crossfit Collection</h1>
+            <p>Alta resistência e conforto para treinos intensos</p>
+            <a href="/categoria/crossfit" class="btn-primary">Explorar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 - Academia -->
+      <div class="swiper-slide">
+        <div class="home-banner" style="background: url('IMAGEM_ACADEMIA.jpg') center/cover no-repeat;">
+          <div class="home-banner-content container">
+            <h1>Gym Essentials</h1>
+            <p>Estilo e performance para seus treinos na academia</p>
+            <a href="/categoria/academia" class="btn-primary">Explorar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 - Beach Tennis -->
+      <div class="swiper-slide">
+        <div class="home-banner" style="background: url('IMAGEM_BEACH_TENNIS.jpg') center/cover no-repeat;">
+          <div class="home-banner-content container">
+            <h1>Beach Tennis Vibes</h1>
+            <p>Conforto e estilo para suas partidas na areia</p>
+            <a href="/categoria/beach-tennis" class="btn-primary">Explorar</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Paginação -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Navegação -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<style>
+  .banner-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  /* Estilos do Slider */
+  .banner-slider {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 600px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #FFFFFF;
+    background: rgba(123, 63, 157, 0.7);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background: rgba(123, 63, 157, 0.9);
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #FFFFFF;
+    opacity: 0.7;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--raia-purple);
+  }
+
+  @media (max-width: 768px) {
+    .swiper-container {
+      height: 400px;
+    }
+
+    .banner-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .banner-buttons a {
+      width: 80%;
+      text-align: center;
+    }
+  }
+</style>

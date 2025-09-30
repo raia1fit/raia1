@@ -1,0 +1,204 @@
+{% comment %}
+  RAIA 01 - Categories Section
+  Seção customizada para exibir categorias de produtos
+{% endcomment %}
+
+<section class="raia01-categories" style="padding: var(--spacing-sections-desktop) 0;">
+  <div class="container page-width">
+
+    {%- comment -%} Título da Seção {%- endcomment -%}
+    <div class="section-title">
+      {% if section.settings.title != blank %}
+        <h2>{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p style="color: #666; font-size: 1.1rem; margin-top: 10px;">{{ section.settings.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    {%- comment -%} Grid de Categorias {%- endcomment -%}
+    <div class="categories-grid">
+      {% for block in section.blocks %}
+        {% if block.type == 'category' %}
+          <a href="{{ block.settings.link }}" class="category-card" {{ block.shopify_attributes }}>
+            {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.title }}" class="category-card-image">
+            {% else %}
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, var(--raia-purple), var(--raia-pink));"></div>
+            {% endif %}
+            <div class="category-card-overlay">
+              <h3 class="category-card-title">{{ block.settings.title }}</h3>
+              {% if block.settings.show_count and block.settings.collection != blank %}
+                <p style="color: rgba(255,255,255,0.9); margin-top: 10px; font-size: 0.9rem;">
+                  {{ collections[block.settings.collection].products_count }} produtos
+                </p>
+              {% endif %}
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 60px 0 0;
+  }
+
+  .category-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 350px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+
+  .category-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .category-card:hover .category-card-image {
+    transform: scale(1.1);
+  }
+
+  .category-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 30px;
+  }
+
+  .category-card-title {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .categories-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .category-card {
+      height: 280px;
+    }
+
+    .category-card-title {
+      font-size: 1.4rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Raia 01 - Categories",
+  "tag": "section",
+  "class": "section-raia01-categories",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título da Seção",
+      "default": "Explore Nossas Categorias"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtítulo",
+      "default": "Encontre o look perfeito para seu treino"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Categoria",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Nome da Categoria",
+          "default": "Crossfit"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagem da Categoria"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link da Categoria"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Coleção (para contagem de produtos)"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_count",
+          "label": "Exibir contagem de produtos",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Raia 01 - Categories",
+      "blocks": [
+        {
+          "type": "category",
+          "settings": {
+            "title": "Crossfit"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "title": "Academia"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "title": "Beach Tennis"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "title": "Lançamentos"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
