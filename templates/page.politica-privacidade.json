@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "raia01_privacidade": {
+      "type": "raia01-privacidade",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "raia01_privacidade"
+  ]
+}

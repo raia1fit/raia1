@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "raia01_termos": {
+      "type": "raia01-termos",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "raia01_termos"
+  ]
+}

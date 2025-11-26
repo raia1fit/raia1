@@ -1,0 +1,115 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="page-width section-{{ section.id }}-padding">
+  <div style="max-width: 900px; margin: 0 auto;">
+
+    <h1 style="text-align: center; color: #7B3F9D; font-size: 2.5rem; margin-bottom: 40px; font-weight: 700;">
+      Política de Privacidade
+    </h1>
+
+    <div style="background: #F8F9FA; padding: 40px; border-radius: 15px; color: #333; line-height: 1.8;">
+
+      <p style="margin-bottom: 25px;">
+        A <strong>Raia 01 Fit Store</strong> respeita sua privacidade e está comprometida em proteger seus dados pessoais. Esta política explica como coletamos, usamos e protegemos suas informações.
+      </p>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">📋 Informações Coletadas</h2>
+      <p style="margin-bottom: 15px;">Coletamos as seguintes informações:</p>
+      <ul style="padding-left: 20px; margin-bottom: 25px;">
+        <li>Nome completo</li>
+        <li>CPF</li>
+        <li>Endereço de entrega</li>
+        <li>E-mail e telefone</li>
+        <li>Dados de pagamento (processados por plataforma segura)</li>
+      </ul>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">🎯 Uso das Informações</h2>
+      <p style="margin-bottom: 15px;">Seus dados são utilizados para:</p>
+      <ul style="padding-left: 20px; margin-bottom: 25px;">
+        <li>Processar e entregar seus pedidos</li>
+        <li>Enviar atualizações sobre seu pedido</li>
+        <li>Melhorar nossos produtos e serviços</li>
+        <li>Enviar ofertas e novidades (com seu consentimento)</li>
+      </ul>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">🔒 Segurança</h2>
+      <p style="margin-bottom: 25px;">
+        Utilizamos tecnologias de segurança para proteger seus dados pessoais contra acesso não autorizado, uso indevido ou divulgação.
+      </p>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">🤝 Compartilhamento de Dados</h2>
+      <p style="margin-bottom: 25px;">
+        Não vendemos ou compartilhamos suas informações pessoais com terceiros, exceto quando necessário para processar seu pedido (transportadoras, gateways de pagamento) ou quando exigido por lei.
+      </p>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">👤 Seus Direitos</h2>
+      <p style="margin-bottom: 15px;">Você tem o direito de:</p>
+      <ul style="padding-left: 20px; margin-bottom: 25px;">
+        <li>Acessar seus dados pessoais</li>
+        <li>Corrigir informações incorretas</li>
+        <li>Solicitar a exclusão de seus dados</li>
+        <li>Revogar consentimento para comunicações</li>
+      </ul>
+
+      <h2 style="color: #7B3F9D; font-size: 1.5rem; margin-bottom: 15px; margin-top: 30px;">📞 Contato</h2>
+      <p style="margin-bottom: 0;">
+        Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato:<br>
+        <strong>Email:</strong> <a href="mailto:raia1fit@gmail.com" style="color: #7B3F9D; text-decoration: none;">raia1fit@gmail.com</a><br>
+        <strong>WhatsApp:</strong> <a href="https://wa.me/5566996977634" style="color: #25D366; text-decoration: none;">(66) 99697-7634</a>
+      </p>
+
+    </div>
+
+    <p style="text-align: center; margin-top: 30px; color: #666; font-size: 0.9rem;">
+      Última atualização: {{ 'now' | date: "%d/%m/%Y" }}
+    </p>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Raia 01 - Privacidade",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaçamento Superior",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Espaçamento Inferior",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Raia 01 - Privacidade"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "raia01_about": {
+      "type": "raia01-about",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "raia01_about"
+  ]
+}
